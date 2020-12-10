@@ -6,7 +6,8 @@
       "version": "2.1.0-preview1-final"
     },
     "configProperties": {
-      "System.GC.Server": true
+      "System.GC.Server": true,
+      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
     }
   }
 }

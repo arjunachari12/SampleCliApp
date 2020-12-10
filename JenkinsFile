@@ -11,7 +11,7 @@ stage ('Checkout') {
 }
 stage ('Restore PACKAGES') {     
          steps {
-             bat "dotnet restore --configfile NuGet.Config"
+             bat "dotnet restore"
           }
         }
 stage('Clean') {
@@ -22,11 +22,6 @@ stage('Clean') {
 stage('Build') {
      steps {
             bat 'dotnet build --configuration Release'
-      }
-   }
-stage('Pack') {
-     steps {
-           bat 'dotnet pack --no-build --output nupkgs'
       }
    }
 // stage('Publish') {
